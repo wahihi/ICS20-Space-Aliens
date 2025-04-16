@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Run Github Super Linter
-        uses: github/super-linter@master
+        uses: github/super-linter/slim@v5
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
