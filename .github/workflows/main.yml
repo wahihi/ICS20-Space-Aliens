@@ -1,0 +1,19 @@
+
+name: GitHub's Super Linter
+on: push
+
+jobs:
+  run-linters:
+    name: Github's Super Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@master
+
+      - name: Run Github Super Linter
+        uses: github/super-linter@master
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN))
